@@ -1,3 +1,301 @@
 baseURL: http://example.org/
 languageCode: en-us
-title: My New Hugo Site
+title: "Shruti Mistry"
+theme : "hugo-profile"
+
+Paginate: 3
+disqusShortname: gurusabarish
+googleAnalytics: G-DWJJVE27WD
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+Menus:
+  main:
+    - identifier: blog
+      name: Blog
+      title: Blog posts
+      url: /blogs
+      weight: 1
+
+    #Dropdown menu
+    - identifier: dropdown
+      title: Example dropdown menu
+      name: Dropdown
+      weight: 2
+    - identifier: dropdown1
+      title: example dropdown 1
+      name: example 1
+      url: /#
+      parent: dropdown
+      weight: 1
+    - identifier: dropdown2
+      title: example dropdown 2
+      name: example 2
+      url: /#
+      parent: dropdown
+      weight: 2
+
+params:
+  title: "Shruti Mistry"
+  description: Text about my cool site
+  favicon: "/letter-s.png"
+
+  theme:
+    disableThemeToggle: false
+    # defaultTheme: "light" # dark
+
+  # font:
+  #   fontSize: 1.5rem # default: 1rem
+  #   fontWeight: 500 # default: 400
+  #   lineHeight: 1 # default: 1.5
+  #   textAlign: right # default: left
+
+  # color preference
+  # color:
+  #   textColor: 
+  #   secondaryTextColor: 
+  #   backgroundColor: 
+  #   secondaryBackgroundColor: 
+  #   primaryColor: 
+  #   secondaryColor: 
+
+  #   darkmode:
+  #     textColor: 
+  #     secondaryTextColor:
+  #     backgroundColor:
+  #     secondaryBackgroundColor:
+  #     primaryColor:
+  #     secondaryColor:
+
+  # If you want to customize the menu, you can change it here
+  # navbar:
+  #   align: mx-auto # Left: ms-auto | center: mx-auto | right: me-auto | Default: ms-auto
+  #   brandLogo: "/logo.png" # Logo for the brand | default is the favicon variable
+  #   brandName: "Profile" # Brand name for the brand | default is the title variable
+
+  #   menus:
+  #     disableAbout: true
+  #     disableExperience: true
+  #     disableEducation: true
+  #     disableProjects: true
+  #     disableAchievements: true
+  #     disableContact: true
+
+  # Hero
+  hero:
+    enable: true
+    intro: "Hi, my name is"
+    title: "Shruti."
+    subtitle: "I am an aspiring Data Scientist"
+    content: "A machine learning enthisiast. I tend to make use of modern web technologies to explore data, extract knowledge and make it look great."
+    image: /images/portfolio-img.jpeg
+    button:
+      enable: true
+      name: "Resume"
+      url: "#"
+    socialLinks:
+      fontAwesomeIcons:
+        - icon: fab fa-instagram
+          url: https://www.instagram.com/shrutii.9/
+        - icon: fab fa-facebook
+          url: https://www.facebook.com/shruti.mistry.507
+        - icon: fab fa-github
+          url: https://github.com/shrutimistry01
+        - icon: fab fa-twitter
+          url: https://twitter.com/Shrutii_09
+
+  # About
+  about:
+    enable: true
+    title: "About Me"
+    image: '/images/about_img.jpeg'
+    content: |-
+      The sheer power of data and how you can get unprecedented information out of it has initiated my journey into the world of data science.</br>
+      Like others, my initial interest was web development which i continue to do for personal use .But as a student mathematics has always been my favourite subject, after realising it has a great use in data analytics I finally found my passionset in the right path. </br>
+      Data science has been my main interest for a year now and my major zest lies in machine learning. I have learnt by doing projects and find python easy but do not limit myself to use it for data science alone.
+      I am currently in my 6th semester of Computer Engineering, with a GPA of 9.7/10  </br>
+      I am currently working on a project that will be used to help people find the best way to get around the city.
+    skills:
+      enable: true
+      title: "Here are a few interest I've been working with recently:"
+      items:
+        - "Data analytics"
+        - "Visualization-Tableu"
+        - "Machine Learning"
+        - "Data analytics"
+        - "Scraping"
+        - "Python"
+        - "Web development"
+        - "Blogging"
+
+  # Experience
+  experience:
+    enable: true
+    items:
+      - job: "Android app development internship"
+        company: "Exposys Data Labs"
+        companyUrl: "https://example.com"
+        date: "Sept 2021 - Aug 2021"
+        featuredLink:
+          enable: true
+          name: "View the project"
+          url: "https://example.com"
+        content: 
+          Developed a meet app for video conference video call 
+          -Lead backend developer for the product.
+          -Added additional features such as filters,etc
+      
+      - job: "Maths tutor"
+        company: "Tutor"
+        companyUrl: "https://example.com"
+        date: "Sep 2020 - Dec 2021"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        info:
+          enable: true
+          content: I worked as a tutor for more than three years.
+        content: |
+          Mathematics being my favourite subject and my major interest.
+          - Taught mathematics to 5th-12th std in classes as well as a personal tutor
+          - Took weekly classes of nearby underprivelleged kids for free.
+      
+      - job: "Call Representative"
+        company: "Sincetele"
+        companyUrl: "https://example.com"
+        date: "Jun 2020 - Aug 2020"
+        info:
+          enable: false
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+        content: |
+          I have worked as a call representative for Sincetele
+          -Convert the calls to lead by engaging the callers
+          -Built public speaking abilities
+
+  # Education
+  education:
+    enable: true
+    # index: true
+    items:
+      - title: "Bachelors of Engineering in Computer"
+        school:
+          name: "MGM Institute of Engineering and Technology"
+          url: "https://example.org"
+        GPA : 9.7/10 (5th semester)
+        date: "2019 - 2023"
+        content:           
+          Extracurricular Activities
+            - Head member of Data Science club of CSI chapter"
+        featuredLink:
+          enable: true
+          name: "My academic record"
+          url: "https://example.com"
+        
+      - title: "Junior College"
+        school:
+          name: "ICLES Motilal Jhunjhunwala college"
+          url: "https://example.org"
+        GPA : 75%
+        date: "2017 - 2019"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+          
+      - title: "High School"
+        school:
+          name: "ICL School"
+          url: "https://example.org"
+        GPA : 90.6%
+        date: "Till 2017"
+        featuredLink:
+          enable: true
+          url: "https://example.com"
+      
+  # Achievements
+  achievements:
+    enable: true
+    items:  
+      - title: Google kickstart runner
+        content: I solved all problems with optimal solution.
+        url: https://example.com
+      - title: Facebook Hackathon Winner
+        content: Developed a product using Artificial Intelligence.
+      - title: Hugo Profile
+        content: Developed a theme and getting 1K+ downloads per month.
+        url: "https://github.com/gurusabarish/hugo-profile"
+      - title:  Microsoft Imagine Runner
+        content: We are developed a product which can help others.
+      - title: Google Summer of Code
+        content: Contributed to a open source project.
+        url: https://example.com
+
+  # projects
+  projects:
+    enable: true
+    items:
+      - title: Hugo Profile
+        content: A highly customizable and mobile first Hugo template for personal portfolio and blog.
+        image: /images/projects/profile.png
+        featured:
+          name: Demo
+          link: https://hugo-profile.netlify.app
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fa fa-envelope
+            url: mailto:?subject=Hugo%20Profile%20Template&body=Check%20it%20out:%20https%3a%2f%2fhugo-profile.netlify.app%2fblog%2fmarkdown-syntax%2f
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/hugo-profile
+          - icon: fab fa-twitter
+            url: https://twitter.com/intent/tweet?text=Check+it+out:&url=https%3A%2F%2Fgithub.com%2Fgurusabarish%2Fhugo-profile
+      
+      - title: Image Converter
+        content:  A web app to convert image to pdf, png to jpg, png to jpg and png to webp without database using django.
+        image: /images/projects/converter.jpg
+        featured:
+          name: Demo
+          link: https://django-converter.herokuapp.com
+        # badges:
+        #   - "Django"
+        #   - "Bootstrap"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/converter
+      
+      - title: Hugo Profile V2
+        content: A clean and simple Hugo template for personal portfolio and blog.
+        image: /images/projects/profile2.jpg
+        featured:
+          name: Demo V2
+          link: https://hugo-profile-2.netlify.app
+        # badges:
+        #   - "Hugo"
+        #   - "Bootstrap"
+        #   - "Javascript"
+        links:
+          - icon: fab fa-github
+            url: https://github.com/gurusabarish/HugoProfileV2
+
+  #Contact
+  contact:
+    enable: true
+    content: My inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
+    email: shrutimistry2001@gmail.com
+    btnName: Mail me
+
+  footer:
+    # recentPosts: false
+    socialNetworks:
+      github: https://github.com/shrutimistry01
+      linkedin: https://linkedin.com
+      twitter: https://twitter.com/Shrutii_09
+      instagram: https://www.instagram.com/shrutii.9/
+      facebook: https://www.facebook.com/shruti.mistry.507
+
